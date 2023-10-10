@@ -1,4 +1,4 @@
-function newTimeZone(event) {
+/*function newTimeZone(event) {
   let targetElement = document.querySelector("#target");
   if (event.target.value.length > 0) {
     if (event.target.value === "tokyo") {
@@ -18,8 +18,72 @@ function newTimeZone(event) {
 }
 
 let select = document.querySelector("#select-city");
-select.addEventListener("change", newTimeZone);
+select.addEventListener("change", newTimeZone);*/
 //                                                "It is Saturday, October 8, 2023 2:51 PM in Europe/Paris"
+
+//adding city selector
+
+function setNewTimeZone() {
+  if (event.target.value.length > 0) {
+    newTimeZoneTarget.innerHTML = `<hr />
+            <div class="col">
+              <h2 class="city">${newCity}</h2>
+              <p class="date">${moment()
+                .tz(newTimeZone)
+                .format("MMMM Do, YYYY")}</p>
+            </div>
+            <div class="col">
+              <h1 class="time">${moment()
+                .tz(newTimeZone)
+                .format("h:mm:ss")}</h1>
+              <span class="am-pm">${moment().tz(newTimeZone).format("A")}</span>
+            </div>`;
+  } else {
+    newTimeZoneTarget.innerHTML = "";
+  }
+}
+
+function newTimeZone(event) {
+  let newTimeZoneTarget = document.querySelector(".target-city");
+  let newTimeZone;
+  let newCity;
+
+  if (event.target.value === "london") {
+    newTimeZone = "Europe/London";
+    newCity = "London";
+  } else if (event.target.value === "dubai") {
+    newTimeZone = "Asia/Dubai";
+    newCity = "Dubai";
+  } else if (event.target.value === "los-angeles") {
+    newTimeZone = "America/Los_Angeles";
+    newCity = "Los Angeles";
+  }
+
+  function setNewTimeZone() {
+    if (event.target.value.length > 0) {
+      newTimeZoneTarget.innerHTML = `<hr />
+            <div class="col">
+              <h2 class="city">${newCity}</h2>
+              <p class="date">${moment()
+                .tz(newTimeZone)
+                .format("MMMM Do, YYYY")}</p>
+            </div>
+            <div class="col">
+              <h1 class="time">${moment()
+                .tz(newTimeZone)
+                .format("h:mm:ss")}</h1>
+              <span class="am-pm">${moment().tz(newTimeZone).format("A")}</span>
+            </div>`;
+    } else {
+      newTimeZoneTarget.innerHTML = "";
+    }
+  }
+
+  setNewTimeZone();
+}
+
+let select = document.querySelector("#select-city");
+select.addEventListener("change", newTimeZone);
 
 //tokyo time and date
 function tokyTimeAndDate() {
