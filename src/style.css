@@ -1,12 +1,39 @@
 .container {
   border: 1px #878787 solid;
   border-radius: 5px;
-  max-width: 600px;
+  max-width: 500px;
   padding: 10px 20px;
   margin-top: 40px;
   box-shadow: 3px 3px 5px #878787;
 }
 
+.title {
+  font-size: 50px;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
 .form-select {
   margin: 20px 0 20px;
+}
+
+.title {
+  line-height: 80px;
+}
+
+.emoji {
+  font-size: 60px;
+}
+
+.time {
+  font-size: 50px;
+}
+
+.tokyo-am-pm {
+  font-size: 20px;
+}
+
+.footer {
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
 }
