@@ -78,7 +78,6 @@ function newTimeZone(event) {
       newTimeZoneTarget.innerHTML = "";
     }
   }
-
   setNewTimeZone();
 }
 
