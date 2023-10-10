@@ -24,12 +24,23 @@
   font-size: 60px;
 }
 
+h2 {
+  font-size: 2.5rem;
+}
+
+.date {
+  color: #878787;
+}
+
 .time {
   font-size: 50px;
 }
 
-.tokyo-am-pm {
+.am-pm {
   font-size: 20px;
+  color: #878787;
+  vertical-align: middle;
+  text-align: right;
 }
 
 .footer {
