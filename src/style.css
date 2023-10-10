@@ -1,0 +1,12 @@
+.container {
+  border: 1px #878787 solid;
+  border-radius: 5px;
+  max-width: 600px;
+  padding: 10px 20px;
+  margin-top: 40px;
+  box-shadow: 3px 3px 5px #878787;
+}
+
+.form-select {
+  margin: 20px 0 20px;
+}

@@ -3,12 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>Document</title>
   </head>
   <body>
-    <h1>World Clock</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <h1>World Clock</h1>
+          </div>
+          <div class="row">
+            <form action="">
+              <select
+                class="form-select"
+                aria-label="Default select example"
+                id="select-city"
+              >
+                <option value="">Select a city</option>
+                <option value="tokyo">London</option>
+                <option value="paris">Dubai</option>
+                <option value="new-york">Los Angeles</option>
+              </select>
+            </form>
+          </div>
+          <hr />
+          <div class="row city1">
+            <div class="col">
+              <h2>Tokyo</h2>
+              <p id="tokyo-date"></p>
+            </div>
+            <div class="col">
+              <h1 class="tokyo-time"></h1>
+            </div>
+          </div>
+          <hr />
+          <div class="row city2">
+            <div class="col">
+              <h2>Paris</h2>
+              <p id="paris-date"></p>
+            </div>
+            <div class="col">
+              <h1 class="paris-time"></h1>
+            </div>
+          </div>
+          <hr />
+          <div class="row city3">
+            <div class="col">
+              <h2>New York</h2>
+              <p id="new-york-date"></p>
+            </div>
+            <div class="col">
+              <h1 class="new-york-time"></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<h1>World Clock</h1>
     <form action="">
       <select name="" id="select-city">
         <option value="">Select a city</option>
@@ -17,7 +77,7 @@
         <option value="new-york">New York</option>
       </select>
     </form>
-    <h2 id="target"></h2>
+    <h2 id="target"></h2>-->
     <footer>
       <a href="https://github.com/rupertforbes/world-clock" target="_blank"
         >Open source code</a
