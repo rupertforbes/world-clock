@@ -1,26 +1,3 @@
-/*function newTimeZone(event) {
-  let targetElement = document.querySelector("#target");
-  if (event.target.value.length > 0) {
-    if (event.target.value === "tokyo") {
-      targetElement.innerHTML = `It is ${moment()
-        .tz("Asia/Tokyo")
-        .format("dddd, MMMM D, YYYY h:mm A")} in Tokyo`;
-    } else if (event.target.value === "paris") {
-      targetElement.innerHTML = `It is ${moment()
-        .tz("Europe/Paris")
-        .format("dddd, MMMM D, YYYY h:mm A")} in Paris`;
-    } else if (event.target.value === "new-york") {
-      targetElement.innerHTML = `It is ${moment()
-        .tz("America/New_York")
-        .format("dddd, MMMM D, YYYY h:mm A")} in New York`;
-    }
-  }
-}
-
-let select = document.querySelector("#select-city");
-select.addEventListener("change", newTimeZone);*/
-//                                                "It is Saturday, October 8, 2023 2:51 PM in Europe/Paris"
-
 //adding city selector
 
 function setNewTimeZone() {
@@ -78,14 +55,14 @@ function newTimeZone(event) {
       newTimeZoneTarget.innerHTML = "";
     }
   }
-  setNewTimeZone();
+  setInterval(setNewTimeZone, 1000);
 }
 
 let select = document.querySelector("#select-city");
 select.addEventListener("change", newTimeZone);
 
 //tokyo time and date
-function tokyTimeAndDate() {
+function tokyoTimeAndDate() {
   let tokyoDate = moment().tz("Asia/Tokyo").format("MMMM Do, YYYY");
   let tokyoDateTarget = document.querySelector(".tokyo-date");
   tokyoDateTarget.innerHTML = tokyoDate;
@@ -96,7 +73,7 @@ function tokyTimeAndDate() {
   tokyoTimeTarget.innerHTML = `${tokyoTime} <span class="am-pm">${tokyoAmPm}</span>`;
 }
 
-setInterval(tokyTimeAndDate, 1000);
+setInterval(tokyoTimeAndDate, 1000);
 
 //paris time and date
 function parisTimeAndDate() {
